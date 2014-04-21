@@ -15,7 +15,12 @@ only in page's HTML add this code:
 	$(window).load(function(){
 		$('#about_right').imgResize();
 	});
-	
+
+/*
+	set defind size
+	$('#about_right').imgResize({'width':600});
+*/
+
 ＜/script＞
 
 ＜div id = 'about_right'＞
