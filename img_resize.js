@@ -1,7 +1,7 @@
 jQuery.fn.extend({
     imgResize: function (settings) {
         var config = {
-            'width': 780
+            'width': $(window).width()
         };
 		var dim_img = this.find('img');
 		var img_arr = new Array();
@@ -31,14 +31,6 @@ jQuery.fn.extend({
 				if(img_w > config.width){
 					re_w = config.width * 0.9;
 					re_h = parseInt(config.width * img_h / img_w) * 0.9 ;
-				}
-				
-				if(img_w > $(window).width()){
-					re_w = $(window).width() * 0.9;
-					re_h = parseInt($(window).width() * img_h / img_w) * 0.9 ;
-				}else{
-					re_w = img_w;
-					re_h = img_h;
 				}
 				
 				dim_img[i].style.width = re_w + 'px';
